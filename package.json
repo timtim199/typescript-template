@@ -1,0 +1,31 @@
+{
+  "name": "typescript-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "watch:build": "tsc -w",
+    "watch:run": "nodemon build/app.js",
+    "watch": "concurrently npm:watch:*",
+
+    "build" : "tsc",
+
+    "prestart" : "npm run build",
+    "start" : "node build/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mitim11/typescript-template.git"
+  },
+  "author": "mitim11",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mitim11/typescript-template/issues"
+  },
+  "homepage": "https://github.com/mitim11/typescript-template#readme",
+  "devDependencies": {
+    "concurrently": "^7.6.0",
+    "nodemon": "^2.0.20",
+    "typescript": "^4.9.3"
+  }
+}
